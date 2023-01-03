@@ -1,15 +1,18 @@
 {% set name = "gitflow" %}
-{% set version = "0.5.1" %}
+{% set version = "1.0.2" %}
+{% set pipname = "nu-gitflow" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gitflow-{{ version }}.tar.bz2
-  sha256: 155f856a4a8248a2cd364e273bfbe790c85be9d5952b6c872a5f51fd50d47251
+  url: https://pypi.io/packages/source/{{ pipname[0] }}/{{ pipname }}/nu-gitflow-{{ version }}.tar.gz
+  sha256: bec2f5d99244e3e0b6587f0dc7fce87e26291724c704f3a771d57f3121c4e1e7
 
 build:
+  entry_points:
+    - git-flow = gitflow.bin:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -21,15 +24,20 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - gitpython >=0.3.2
+    - gitpython >=1.0.1
+    - future
 
 test:
   imports:
     - gitflow
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: http://github.com/htgoebel/gitflow/
-  summary: Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+  home: http://github.com/chassing/gitflow/
+  summary: Git extensions to provide high-level repository operations for Vincent Driessen's branching model
   license: BSD-3-Clause
   license_file: LICENSE.txt
 

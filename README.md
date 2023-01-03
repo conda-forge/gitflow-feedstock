@@ -1,13 +1,13 @@
 About gitflow
 =============
 
-Home: http://github.com/htgoebel/gitflow/
+Home: http://github.com/chassing/gitflow/
 
 Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gitflow-feedstock/blob/main/LICENSE.txt)
 
-Summary: Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+Summary: Git extensions to provide high-level repository operations for Vincent Driessen's branching model
 
 Current build status
 ====================
