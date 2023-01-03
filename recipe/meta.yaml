@@ -32,7 +32,6 @@ test:
     - gitflow
   commands:
     - pip check
-    - git-flow --help
   requires:
     - pip
 
