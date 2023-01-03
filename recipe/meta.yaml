@@ -1,12 +1,13 @@
 {% set name = "gitflow" %}
 {% set version = "1.0.2" %}
+{% set pipname = "nu-gitflow" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nu-gitflow-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ pipname[0] }}/{{ pipname }}/nu-gitflow-{{ version }}.tar.gz
   sha256: bec2f5d99244e3e0b6587f0dc7fce87e26291724c704f3a771d57f3121c4e1e7
 
 build:
