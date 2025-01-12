@@ -14,7 +14,7 @@ build:
   entry_points:
     - git-flow = gitflow.bin:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
     - python {{ python_min }}
     - ez_setup
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - gitpython >=1.0.1
